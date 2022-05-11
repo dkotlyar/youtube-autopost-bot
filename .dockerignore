@@ -1,0 +1,7 @@
+venv
+.idea
+debug
+__pycache__
+*/__pycache__
+*/downloads
+telegram-bot-api-data

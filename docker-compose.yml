@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  telegram-bot-api:
+    image: aiogram/telegram-bot-api:latest
+    environment:
+      TELEGRAM_API_ID: "pasthere"
+      TELEGRAM_API_HASH: "pasthere"
+    volumes:
+      - ./telegram-bot-api-data:/var/lib/telegram-bot-api
+    ports:
+      - 8081:8081
+
+  youtube-bot:
+    image: youtube-bot/youtube-bot:latest
+    environment:
+      TELEGRAM_SERVER: "http://telegram-bot-api:8081"
+      TELEGRAM_BOT_TOKEN: "pasthere"
+      CAN_CHANGE_WEBHOOK: "yes"
+    ports:
+      - 5000:5000

@@ -1,0 +1,8 @@
+flask
+yt-dlp
+opencv-python
+numpy
+requests[security]
+flask-migrate~=3.1.0
+psycopg2-binary~=2.9.2
+flask-sqlalchemy-extension>=0.0.3
